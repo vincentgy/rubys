@@ -6,9 +6,9 @@
   ),
   'globals' => 
   array (
-    'site_name' => 'TinyShop大型电子商务系统',
+    'site_name' => 'HealthSong',
     'site_logo' => '',
-    'site_keywords' => '泰创软件科技有限公司|Tiny系列产品',
+    'site_keywords' => 'Deyou软件科技有限公司',
     'site_description' => '工匠精神、细节、点滴、开源、高效、安全',
     'site_icp' => '',
     'site_url' => '',
