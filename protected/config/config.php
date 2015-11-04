@@ -13,11 +13,11 @@
   'db' => 
   array (
     'type' => 'mysql',
-    'tablePre' => 'tiny_',
-    'host' => '127.0.0.1:3306',
+    'tablePre' => 'ruby_',
+    'host' => '127.0.0.1',
     'user' => 'root',
     'password' => 'r00t',
-    'name' => 'rubytest',
+    'name' => 'rubys',
   ),
   'route' => 
   array (

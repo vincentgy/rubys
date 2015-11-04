@@ -59,7 +59,6 @@ class DbSql
 			$num = 0;
 			foreach($sqls as $sql)
 			{
-                                echo $sql.'\n';
 				//$sql= preg_replace("/(create|drop|insert)([^`]+`)([a-zA-Z]*_)?(\w+)(`.*)/i","$1$2{$per}$4$5",$sql);
 				if(preg_match_all("/(create|drop|insert)([^`]+`)(Tiny_)?(\w+)(`.*)/i",$sql,$out)){
 					$sql = $out[1][0].$out[2][0].$per.$out[4][0].$out[5][0];
@@ -73,7 +72,7 @@ class DbSql
 					}
 					else 
 					{
-						if($op=='create')$str= $sql."<b style='color:#990000'> 创建表 ".($per.$out[4][0])."…………失败</b>";
+						if($op=='create')$str= "<b style='color:#990000'> 创建表 ".($per.$out[4][0])."…………失败</b>";
 						//else if($op=='drop')echo "<div style='color:#990000'> 删除表 ".($per.$out[4][0])."…………失败</div>";
 						else if($op=='insert')$str= "<b style='color:#990000'> 写入表 ".($per.$out[4][0])."…………失败</b>";
 						$flag=false;

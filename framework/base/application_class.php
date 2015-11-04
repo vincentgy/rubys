@@ -122,13 +122,11 @@ abstract class App extends Module implements Application
 		$appExtension = ExtensionFactory::getFactory('appExtension');
 		if($appExtension !== null )
 		{
-                        echo 'extention';
 			$appExtension->before();
 			$this->doRequest();
 			$appExtension->after();
 		}
 		else $this->doRequest();
-                echo 'finish running';
 		Tiny::$_iserror = false;
 	}
 
