@@ -13,7 +13,7 @@
   'db' => 
   array (
     'type' => 'mysql',
-    'tablePre' => 'ruby_',
+    'tablePre' => 'rubys_',
     'host' => '127.0.0.1',
     'user' => 'root',
     'password' => 'r00t',
