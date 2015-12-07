@@ -424,5 +424,6 @@ table.form textarea{display: block; width: 420px; height: 48px; margin: 0; borde
 .screen_960 .product_show .row4 dt.img{width: 303px;height: 303px; overflow: hidden; margin-bottom:6px;}
 .screen_960 .nav-header .title{width: 313px;}
 /*--E screen_960 --*/
+.contactinfo {content: url(../images/wechat.png)}
 
 
