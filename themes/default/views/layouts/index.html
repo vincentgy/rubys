@@ -154,16 +154,12 @@
 					</dl>
 					{/query}
 				</div>
-				<div class="footer-links">
-					<p><a><b>友情连接：</b></a><a href="http://www.tinyrise.com">济南泰创软件科技有限公司</a></p>
-				</div>
+
 				<div class="copyright">
 					<div>{query:name=nav where=type eq 'bottom' order=`sort` desc}
 					<a href="{if:strstr($item['link'],'http://')===false}{url:$item[link]}{else:}{$item['link']}{/if}" target="{if:$item['open_type']==1}_blank{else:}_self{/if}">{$item['name']}</a>
 					{/query}</div>
-					<!--S 济南泰创软件科技有限公司保留所有版权，非授权用户严禁删除版权信息；擅自删除，后果自负，您的支持是我们成长的动力。-->
-					<div><span>Powered by <a href="http://www.tinyrise.com"><b style="color: #7c0000">Tiny</b><b style="color: #666">Shop</b></a></span> © 2015 <a href="http://www.tinyrise.com">tinyrise.com</a> . 保留所有权利 。{$site_icp} </div>
-					<!--S 济南泰创软件科技有限公司保留所有版权，非授权用户严禁删除版权信息；擅自删除，后果自负，您的支持是我们成长的动力。-->
+					<div><span>Powered by DeyouTech © 2015  . 保留所有权利 。{$site_icp} </div>
 				</div>
 			</div>
 
