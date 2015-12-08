@@ -195,7 +195,7 @@ a:hover{color:#c53f4c; }
 .header-cart dl:hover dt,.header-cart dl.hover dt{z-index: 100;border-bottom: none;}
 .header-cart dl:hover dd,.header-cart dl.hover dd{display: block; z-index: 10;}
 
-.header-nav{background: #7c0000 ;position: relative;}
+.header-nav{background: #0B0B61 ;position: relative;}
 .header-nav .nav{padding-left: 240px;height: 36px;line-height: 36px;}
 .header-nav .nav a{font-size: 15px;  text-align: center; outline: none;text-decoration: none;display: block;float: left;height: 36px;padding: 0 20px; color: #ddd;overflow: hidden;}
 .header-nav .current a{background: #5A4747;}

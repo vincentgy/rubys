@@ -1,6 +1,6 @@
 <?php return array(
 "Cart"=>"Cart.php",
-"Category"=>"Category.php",
+"Type"=>"Category.php",
 "ClassConfig"=>"ClassConfig.php",
 "Common"=>"Common.php",
 "Config"=>"Config.php",
