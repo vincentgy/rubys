@@ -1,17 +1,17 @@
 <?php
 // Text
-$_['text_information']  = 'Information';
-$_['text_service']      = 'Customer Service';
-$_['text_extra']        = 'Extras';
-$_['text_contact']      = 'Contact Us';
-$_['text_return']       = 'Returns';
-$_['text_sitemap']      = 'Site Map';
-$_['text_manufacturer'] = 'Brands';
+$_['text_information']  = '信息';
+$_['text_service']      = '客服';
+$_['text_extra']        = '附加功能';
+$_['text_contact']      = '联系我们';
+$_['text_return']       = '退款';
+$_['text_sitemap']      = '网站地图';
+$_['text_manufacturer'] = '品牌';
 $_['text_voucher']      = 'Gift Vouchers';
 $_['text_affiliate']    = 'Affiliates';
 $_['text_special']      = 'Specials';
-$_['text_account']      = 'My Account';
-$_['text_order']        = 'Order History';
-$_['text_wishlist']     = 'Wish List';
+$_['text_account']      = '我的账户';
+$_['text_order']        = '购买历史';
+$_['text_wishlist']     = '我的关注';
 $_['text_newsletter']   = 'Newsletter';
-$_['text_powered']      = 'Powered By <a href="http://www.opencart.com">OpenCart</a><br /> %s &copy; %s';
+$_['text_powered']      = 'Powered By Deyou Tech Ltd.<br /> %s &copy; %s';
