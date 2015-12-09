@@ -1,7 +1,7 @@
 <?php
 // Text
 $_['text_home']          = '主页';
-$_['text_wishlist']      = 'Wish List (%s)';
+$_['text_wishlist']      = '我的关注 (%s)';
 $_['text_shopping_cart'] = '购物车';
 $_['text_category']      = '分类';
 $_['text_account']       = '我的账户';
