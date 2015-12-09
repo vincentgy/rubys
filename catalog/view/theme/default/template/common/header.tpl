@@ -115,4 +115,6 @@
     </div>
   </nav>
 </div>
+<div class ="wechat_icon">
+</div>
 <?php } ?>
