@@ -1,37 +1,37 @@
 <?php
+
 // Heading
-$_['heading_title']        = 'Address Book';
+$_['heading_title']        = '地址簿';
 
 // Text
-$_['text_account']         = 'Account';
-$_['text_address_book']    = 'Address Book Entries';
-$_['text_edit_address']    = 'Edit Address';
-$_['text_add']             = 'Your address has been successfully inserted';
-$_['text_edit']            = 'Your address has been successfully updated';
-$_['text_delete']          = 'Your address has been successfully deleted';
-$_['text_empty']           = 'You have no addresses in your account.';
+$_['text_account']         = '账户';
+$_['text_address_book']    = '地址列表';
+$_['text_edit_address']    = '编辑地址';
+$_['text_add']             = '新增地址成功';
+$_['text_edit']            = '更新地址成功';
+$_['text_delete']          = '已删除地址';
+$_['text_empty']           = '地址簿中无地址。';
 
 // Entry
-$_['entry_firstname']      = 'First Name';
-$_['entry_lastname']       = 'Last Name';
-$_['entry_company']        = 'Company';
-$_['entry_address_1']      = 'Address 1';
-$_['entry_address_2']      = 'Address 2';
-$_['entry_postcode']       = 'Post Code';
-$_['entry_city']           = 'City';
-$_['entry_country']        = 'Country';
-$_['entry_zone']           = 'Region / State';
-$_['entry_default']        = 'Default Address';
+$_['entry_fullname']       = '姓名';
+$_['entry_company']        = '公司';
+$_['entry_address']        = '地址';
+$_['entry_postcode']       = '邮政编码';
+$_['entry_city']           = '所在城市';
+$_['entry_country']        = '国家';
+$_['entry_zone']           = '州/省/地区';
+$_['entry_default']        = '默认地址';
+$_['entry_shipping_telephone'] 	     = '收件人电话';
 
 // Error
-$_['error_delete']         = 'Warning: You must have at least one address!';
-$_['error_default']        = 'Warning: You can not delete your default address!';
-$_['error_firstname']      = 'First Name must be between 1 and 32 characters!';
-$_['error_lastname']       = 'Last Name must be between 1 and 32 characters!';
-$_['error_vat']            = 'VAT number is invalid!';
-$_['error_address_1']      = 'Address must be between 3 and 128 characters!';
-$_['error_postcode']       = 'Postcode must be between 2 and 10 characters!';
-$_['error_city']           = 'City must be between 2 and 128 characters!';
-$_['error_country']        = 'Please select a country!';
-$_['error_zone']           = 'Please select a region / state!';
-$_['error_custom_field']   = '%s required!';
+$_['error_delete']         = '警告: 必须拥有至少一个地址！';
+$_['error_default']        = '警告: 不能删除默认地址！';
+$_['error_fullname']       = '姓名必须为 2-32字符！';
+$_['error_vat']            = 'VAT 号码无效！';
+$_['error_address']        = '地址必须为 3-128字符！';
+$_['error_postcode']       = '邮政编码必须为 2-10字符！';
+$_['error_city']           = '所在城市必须为 2-128字符！';
+$_['error_country']        = '请选择国家';
+$_['error_zone']           = '请选择州/省/地区！';
+$_['error_custom_field']   = '%s 必须！';
+$_['error_shipping_telephone']       = '收件人电话必须为3到32字节！';

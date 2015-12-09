@@ -1,16 +1,17 @@
 <?php
+
 // Text
-$_['text_success']           = 'Success: You have modified orders!';
+$_['text_success']           = '已成功修改订单';
 
 // Error
-$_['error_permission']       = 'Warning: You do not have permission to access the API!';
-$_['error_customer']         = 'Warning: Customer details needs to be set!';
-$_['error_payment_address']  = 'Warning: Payment address required!';
-$_['error_payment_method']   = 'Warning: Payment method required!';
-$_['error_no_payment']       = 'Warning: No Payment options are available!';
-$_['error_shipping_address'] = 'Warning: Shipping address required!';
-$_['error_shipping_method']  = 'Warning: Shipping method required!';
-$_['error_no_shipping']      = 'Warning: No Shipping options are available!';
-$_['error_stock']            = 'Warning: Products marked with *** are not available in the desired quantity or not in stock!';
-$_['error_minimum']          = 'Warning: Minimum order amount for %s is %s!';
-$_['error_not_found']        = 'Warning: Order could not be found!';
+$_['error_permission']       = '警告: 无权限访问 API 接口！';
+$_['error_customer']         = '警告: 需要设置会员资料!';
+$_['error_payment_address']  = '警告: 需要账单地址!';
+$_['error_payment_method']   = '警告: 需要支付方式!';
+$_['error_no_payment']       = '警告: 没有可用支付选项!';
+$_['error_shipping_address'] = '警告: 需要配送地址!';
+$_['error_shipping_method']  = '警告: 需要配送方式!';
+$_['error_no_shipping']      = '警告: 没有可用配送选项!';
+$_['error_stock']            = '警告: 标有 *** 的商品为库存少于您所需要的商品数量或库存不足！';
+$_['error_minimum']          = '警告: %s 的最小订单数量为 %s！';
+$_['error_not_found']        = '警告: 无此订单!';

@@ -1,15 +1,16 @@
 <?php
+
 // Heading
-$_['heading_title']    = 'Affiliate';
+$_['heading_title']    = '推广';
 
 // Text
-$_['text_register']    = 'Register';
-$_['text_login']       = 'Login';
-$_['text_logout']      = 'Logout';
-$_['text_forgotten']   = 'Forgotten Password';
-$_['text_account']     = 'My Account';
-$_['text_edit']        = 'Edit Account';
-$_['text_password']    = 'Password';
-$_['text_payment']     = 'Payment Options';
-$_['text_tracking']    = 'Affiliate Tracking';
-$_['text_transaction'] = 'Transactions';
+$_['text_register']    = '推广会员注册';
+$_['text_login']       = '推广会员登录';
+$_['text_logout']      = '退出登录';
+$_['text_forgotten']   = '忘记密码';
+$_['text_account']     = '我的推广账户';
+$_['text_edit']        = '编辑推广账户';
+$_['text_password']    = '密码';
+$_['text_payment']     = '支付选项';
+$_['text_tracking']    = '推广跟踪';
+$_['text_transaction'] = '佣金记录';

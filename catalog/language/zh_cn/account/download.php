@@ -1,14 +1,15 @@
 <?php
+
 // Heading
-$_['heading_title']     = 'Account Downloads';
+$_['heading_title']     = '下载文件';
 
 // Text
-$_['text_account']      = 'Account';
-$_['text_downloads']    = 'Downloads';
-$_['text_empty']        = 'You have not made any previous downloadable orders!';
+$_['text_account']      = '账户';
+$_['text_downloads']    = '下载文件';
+$_['text_empty']        = '尚无含有下载文件的订单！';
 
 // Column
-$_['column_order_id']   = 'Order ID';
-$_['column_name']       = 'Name';
-$_['column_size']       = 'Size';
-$_['column_date_added'] = 'Date Added';
+$_['column_order_id']   = '订单号 ID';
+$_['column_name']       = '姓名';
+$_['column_size']       = '大小';
+$_['column_date_added'] = '添加日期';

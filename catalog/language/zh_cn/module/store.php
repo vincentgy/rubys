@@ -1,7 +1,8 @@
 <?php
+
 // Heading
-$_['heading_title'] = 'Choose a Store';
+$_['heading_title'] = '选择网店';
 
 // Text
-$_['text_default']  = 'Default';
-$_['text_store']    = 'Please choose the store you wish to visit.';
+$_['text_default']  = '默认';
+$_['text_store']    = '选择希望访问的网店。';

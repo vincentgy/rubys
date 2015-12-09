@@ -1,9 +1,9 @@
 <?php
 // Heading
-$_['heading_title'] = 'Captcha';
+$_['heading_title'] = '验证码';
 
 // Entry
-$_['entry_captcha'] = 'Enter the code in the box below';
+$_['entry_captcha'] = '输入下图中的验证码';
 
 // Error
-$_['error_captcha'] = 'Verification code does not match the image!';
+$_['error_captcha'] = '验证码不正确！';

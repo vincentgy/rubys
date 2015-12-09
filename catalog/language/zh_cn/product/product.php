@@ -1,50 +1,52 @@
 <?php
+
 // Text
-$_['text_search']              = 'Search';
-$_['text_brand']               = 'Brand';
-$_['text_manufacturer']        = 'Brand:';
-$_['text_model']               = 'Product Code:';
-$_['text_reward']              = 'Reward Points:';
-$_['text_points']              = 'Price in reward points:';
-$_['text_stock']               = 'Availability:';
-$_['text_instock']             = 'In Stock';
-$_['text_tax']                 = 'Ex Tax:';
-$_['text_discount']            = ' or more ';
-$_['text_option']              = 'Available Options';
-$_['text_minimum']             = 'This product has a minimum quantity of %s';
-$_['text_reviews']             = '%s reviews';
-$_['text_write']               = 'Write a review';
-$_['text_login']               = 'Please <a href="%s">login</a> or <a href="%s">register</a> to review';
-$_['text_no_reviews']          = 'There are no reviews for this product.';
-$_['text_note']                = '<span class="text-danger">Note:</span> HTML is not translated!';
-$_['text_success']             = 'Thank you for your review. It has been submitted to the webmaster for approval.';
-$_['text_related']             = 'Related Products';
-$_['text_tags']                = 'Tags:';
-$_['text_error']               = 'Product not found!';
-$_['text_payment_recurring']   = 'Payment Profile';
+$_['text_search']              = '搜索';
+$_['text_brand']               = '品牌';
+$_['text_manufacturer']        = '品牌:';
+$_['text_model']               = '型号:';
+$_['text_reward']              = '奖励积分:';
+$_['text_points']              = '购买所需奖励积分';
+$_['text_stock']               = '库存状态:';
+$_['text_instock']             = '有库存';
+$_['text_tax']                 = '税前:';
+$_['text_discount']            = ' 或更多 ';
+$_['text_option']              = '可选选项';
+$_['text_minimum']             = '该商品最低购买数量 %s';
+$_['text_reviews']             = '%s 评论';
+$_['text_write']               = '写评论';
+$_['text_login']               = '请<a href="%s">登录</a>或<a href="%s">注册</a>后再评论';
+$_['text_no_reviews']          = '目前尚无评论。';
+$_['text_note']                = '<span class="text-danger">注意:</span> 不接受 HTML 格式内容！';
+$_['text_success']             = '感谢您的意见。 已向管理员提交审批请求。';
+$_['text_related']             = '相关商品';
+$_['text_tags']                = '标签:';
+$_['text_error']               = '未发现该商品！';
+$_['text_payment_recurring']   = '分期付款';
 $_['text_trial_description']   = '%s every %d %s(s) for %d payment(s) then';
 $_['text_payment_description'] = '%s every %d %s(s) for %d payment(s)';
 $_['text_payment_cancel']      = '%s every %d %s(s) until canceled';
-$_['text_day']                 = 'day';
-$_['text_week']                = 'week';
-$_['text_semi_month']          = 'half-month';
-$_['text_month']               = 'month';
-$_['text_year']                = 'year';
+$_['text_day']                 = '天';
+$_['text_week']                = '周';
+$_['text_semi_month']          = '半月';
+$_['text_month']               = '月';
+$_['text_year']                = '年';
 
 // Entry
-$_['entry_qty']                = 'Qty';
-$_['entry_name']               = 'Your Name';
-$_['entry_review']             = 'Your Review';
-$_['entry_rating']             = 'Rating';
-$_['entry_good']               = 'Good';
-$_['entry_bad']                = 'Bad';
+$_['entry_qty']                = '数量';
+$_['entry_name']               = '姓名';
+$_['entry_review']             = '评论';
+$_['entry_rating']             = '评级';
+$_['entry_good']               = '好';
+$_['entry_bad']                = '差';
+$_['entry_captcha']            = '请在下框输入验证码：';
 
 // Tabs
-$_['tab_description']          = 'Description';
-$_['tab_attribute']            = 'Specification';
-$_['tab_review']               = 'Reviews (%s)';
+$_['tab_description']          = '详情';
+$_['tab_attribute']            = '属性';
+$_['tab_review']               = '评论 (%s)';
 
 // Error
-$_['error_name']               = 'Warning: Review Name must be between 3 and 25 characters!';
-$_['error_text']               = 'Warning: Review Text must be between 25 and 1000 characters!';
-$_['error_rating']             = 'Warning: Please select a review rating!';
+$_['error_name']               = '警告: 评论者姓名必须为 3 - 25字符！';
+$_['error_text']               = '警告: 评论内容必须为 25 - 1000字符！';
+$_['error_rating']             = '警告: 请选择评级！';

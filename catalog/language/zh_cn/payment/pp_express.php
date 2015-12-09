@@ -1,4 +1,5 @@
 <?php
+
 // Heading
 $_['express_text_title']      = 'Confirm order';
 

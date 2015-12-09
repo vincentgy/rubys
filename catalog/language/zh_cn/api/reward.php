@@ -1,9 +1,10 @@
 <?php
+
 // Text
-$_['text_success']     = 'Success: Your reward points discount has been applied!';
+$_['text_success']     = '成功: 已使用奖励积分！';
 
 // Error
-$_['error_permission'] = 'Warning: You do not have permission to access the API!';
-$_['error_reward']     = 'Warning: Please enter the amount of reward points to use!';
-$_['error_points']     = 'Warning: You don\'t have %s reward points!';
-$_['error_maximum']    = 'Warning: The maximum number of points that can be applied is %s!';
+$_['error_permission'] = '警告: 无权限访问 API 接口！';
+$_['error_reward']     = '警告: 请输入要使用的奖励积分数值！';
+$_['error_points']     = '警告: 没有 %s 奖励积分，奖励积分不足！';
+$_['error_maximum']    = '警告: 可用最大奖励积分为 %s！';

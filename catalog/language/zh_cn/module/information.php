@@ -1,7 +1,8 @@
 <?php
+
 // Heading
-$_['heading_title'] = 'Information';
+$_['heading_title'] = '信息文章';
 
 // Text
-$_['text_contact']  = 'Contact Us';
-$_['text_sitemap']  = 'Site Map';
+$_['text_contact']  = '联系我们';
+$_['text_sitemap']  = '网址地图';

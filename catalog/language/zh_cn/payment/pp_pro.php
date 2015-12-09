@@ -1,4 +1,5 @@
 <?php
+
 // Text
 $_['text_title']				= 'Credit or Debit Card (Processed securely by PayPal)';
 $_['text_wait']					= 'Please wait!';

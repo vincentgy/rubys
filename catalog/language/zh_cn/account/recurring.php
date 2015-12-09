@@ -1,12 +1,13 @@
 <?php
-$_['heading_title'] = 'Recurring Payments';
-$_['button_continue'] = 'Continue';
-$_['button_view'] = 'View';
-$_['text_empty'] = 'No recurring payments found';
+
+$_['heading_title'] = '分期付款';
+$_['button_continue'] = '继续';
+$_['button_view'] = '查看';
+$_['text_empty'] = '无分期付款记录';
 $_['text_product'] = 'Product: ';
 $_['text_order'] = 'Order: ';
-$_['text_quantity'] = 'Quantity: ';
-$_['text_account'] = 'Account';
+$_['text_quantity'] = '数量: ';
+$_['text_account'] = '账户';
 $_['text_action'] = 'Action';
 $_['text_recurring'] = 'Recurring payment';
 $_['text_transactions'] = 'Transactions';
@@ -25,7 +26,7 @@ $_['text_recurring_detail'] = 'Recurring payment details';
 $_['text_recurring_id'] = 'Profile ID: ';
 $_['text_payment_method'] = 'Payment method: ';
 $_['text_date_added'] = 'Created: ';
-$_['text_recurring_description'] = 'Description: ';
+$_['text_recurring_description'] = '描述: ';
 $_['text_status'] = 'Status: ';
 $_['text_ref'] = 'Reference: ';
 

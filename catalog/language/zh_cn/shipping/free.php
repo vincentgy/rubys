@@ -1,4 +1,5 @@
 <?php
+
 // Text
-$_['text_title']       = 'Free Shipping';
-$_['text_description'] = 'Free Shipping';
+$_['text_title']       = '免运费';
+$_['text_description'] = '免运费';
