@@ -47,14 +47,18 @@ class ControllerSettingSetting extends Controller {
 		$data['text_payment'] = $this->language->get('text_payment');
 		$data['text_mail'] = $this->language->get('text_mail');
 		$data['text_smtp'] = $this->language->get('text_smtp');
+		$data['text_baidu'] = $this->language->get('text_baidu');
+		$data['text_google'] = $this->language->get('text_google');
 		$data['text_general'] = $this->language->get('text_general');
 		$data['text_security'] = $this->language->get('text_security');
 		$data['text_upload'] = $this->language->get('text_upload');
 		$data['text_error'] = $this->language->get('text_error');
 
+
 		$data['entry_name'] = $this->language->get('entry_name');
 		$data['entry_owner'] = $this->language->get('entry_owner');
 		$data['entry_address'] = $this->language->get('entry_address');
+		$data['entry_miit'] = $this->language->get('entry_miit');
 		$data['entry_geocode'] = $this->language->get('entry_geocode');
 		$data['entry_email'] = $this->language->get('entry_email');
 		$data['entry_telephone'] = $this->language->get('entry_telephone');
@@ -159,6 +163,8 @@ class ControllerSettingSetting extends Controller {
 		$data['entry_error_display'] = $this->language->get('entry_error_display');
 		$data['entry_error_log'] = $this->language->get('entry_error_log');
 		$data['entry_error_filename'] = $this->language->get('entry_error_filename');
+		$data['entry_google_analytics'] = $this->language->get('entry_google_analytics');
+		$data['entry_map_select'] = $this->language->get('entry_map_select');
 		$data['entry_status'] = $this->language->get('entry_status');
 
 		$data['help_geocode'] = $this->language->get('help_geocode');
@@ -182,9 +188,10 @@ class ControllerSettingSetting extends Controller {
 		$data['help_customer_group'] = $this->language->get('help_customer_group');
 		$data['help_customer_group_display'] = $this->language->get('help_customer_group_display');
 		$data['help_customer_price'] = $this->language->get('help_customer_price');
-		$data['help_login_attempts'] = $this->language->get('help_login_attempts');
+		$data['help_login_attempts'] = $this->language->get('help_login_attempts');		
 		$data['help_account'] = $this->language->get('help_account');
 		$data['help_account_mail'] = $this->language->get('help_account_mail');
+		$data['help_api'] = $this->language->get('help_api');
 		$data['help_cart_weight'] = $this->language->get('help_cart_weight');
 		$data['help_checkout_guest'] = $this->language->get('help_checkout_guest');
 		$data['help_checkout'] = $this->language->get('help_checkout');
@@ -194,7 +201,6 @@ class ControllerSettingSetting extends Controller {
 		$data['help_complete_status'] = $this->language->get('help_complete_status');
 		$data['help_fraud_status'] = $this->language->get('help_fraud_status');
 		$data['help_order_mail'] = $this->language->get('help_order_mail');
-		$data['help_api'] = $this->language->get('help_api');
 		$data['help_stock_display'] = $this->language->get('help_stock_display');
 		$data['help_stock_warning'] = $this->language->get('help_stock_warning');
 		$data['help_stock_checkout'] = $this->language->get('help_stock_checkout');
@@ -224,6 +230,7 @@ class ControllerSettingSetting extends Controller {
 		$data['help_password'] = $this->language->get('help_password');
 		$data['help_encryption'] = $this->language->get('help_encryption');
 		$data['help_compression'] = $this->language->get('help_compression');
+		$data['help_google_analytics'] = $this->language->get('help_google_analytics');
 
 		$data['button_save'] = $this->language->get('button_save');
 		$data['button_cancel'] = $this->language->get('button_cancel');
@@ -290,19 +297,19 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['error_zone'] = '';
 		}
-
+	
 		if (isset($this->error['customer_group_display'])) {
 			$data['error_customer_group_display'] = $this->error['customer_group_display'];
 		} else {
 			$data['error_customer_group_display'] = '';
 		}
-
+		
 		if (isset($this->error['login_attempts'])) {
 			$data['error_login_attempts'] = $this->error['login_attempts'];
 		} else {
 			$data['error_login_attempts'] = '';
-		}
-
+		}	
+		
 		if (isset($this->error['voucher_min'])) {
 			$data['error_voucher_min'] = $this->error['voucher_min'];
 		} else {
@@ -488,6 +495,20 @@ class ControllerSettingSetting extends Controller {
 			$data['config_address'] = $this->request->post['config_address'];
 		} else {
 			$data['config_address'] = $this->config->get('config_address');
+		}
+		
+		if (isset($this->request->post['config_miit'])) {
+			$data['config_miit'] = $this->request->post['config_miit'];
+		} else {
+			$data['config_miit'] = $this->config->get('config_miit');
+		}
+		
+		if (isset($this->request->post['config_map_select'])) {
+			$data['config_map_select'] = $this->request->post['config_map_select'];
+		} elseif ($this->config->get('config_map_select')) {
+			$data['config_map_select'] = $this->config->get('config_map_select');
+		} else {
+			$data['config_map_select'] = 'baidu';
 		}
 
 		if (isset($this->request->post['config_geocode'])) {
@@ -767,7 +788,7 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_customer_price'] = $this->config->get('config_customer_price');
 		}
-
+		
 		if (isset($this->request->post['config_login_attempts'])) {
 			$data['config_login_attempts'] = $this->request->post['config_login_attempts'];
 		} elseif ($this->config->has('config_login_attempts')) {
@@ -775,7 +796,7 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_login_attempts'] = 5;
 		}
-
+		
 		if (isset($this->request->post['config_account_id'])) {
 			$data['config_account_id'] = $this->request->post['config_account_id'];
 		} else {
@@ -791,6 +812,7 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_account_mail'] = $this->config->get('config_account_mail');
 		}
+
 
 		if (isset($this->request->post['config_cart_weight'])) {
 			$data['config_cart_weight'] = $this->request->post['config_cart_weight'];
@@ -839,7 +861,7 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_complete_status'] = array();
 		}
-
+		
 		if (isset($this->request->post['config_order_status_id'])) {
 			$data['config_fraud_status_id'] = $this->request->post['config_fraud_status_id'];
 		} else {
@@ -855,7 +877,7 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_order_mail'] = $this->config->get('config_order_mail');
 		}
-
+		
 		if (isset($this->request->post['config_api_id'])) {
 			$data['config_api_id'] = $this->request->post['config_api_id'];
 		} else {
@@ -937,7 +959,7 @@ class ControllerSettingSetting extends Controller {
 		$this->load->model('localisation/return_status');
 
 		$data['return_statuses'] = $this->model_localisation_return_status->getReturnStatuses();
-
+		
 		if (isset($this->request->post['config_captcha'])) {
 			$data['config_captcha'] = $this->request->post['config_captcha'];
 		} else {
@@ -991,6 +1013,7 @@ class ControllerSettingSetting extends Controller {
 			'text'  => $this->language->get('text_contact'),
 			'value' => 'contact'
 		);
+
 
 		if (isset($this->request->post['config_logo'])) {
 			$data['config_logo'] = $this->request->post['config_logo'];
@@ -1191,40 +1214,40 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_mail_parameter'] = $this->config->get('config_mail_parameter');
 		}
-
+		
 		if (isset($this->request->post['config_mail_smtp_hostname'])) {
 			$data['config_mail_smtp_hostname'] = $this->request->post['config_mail_smtp_hostname'];
 		} else {
 			$data['config_mail_smtp_hostname'] = $this->config->get('config_mail_smtp_hostname');
 		}
-
+		
 		if (isset($this->request->post['config_mail_smtp_username'])) {
 			$data['config_mail_smtp_username'] = $this->request->post['config_mail_smtp_username'];
 		} else {
 			$data['config_mail_smtp_username'] = $this->config->get('config_mail_smtp_username');
-		}
-
+		}	
+					
 		if (isset($this->request->post['config_mail_smtp_password'])) {
 			$data['config_mail_smtp_password'] = $this->request->post['config_mail_smtp_password'];
 		} else {
 			$data['config_mail_smtp_password'] = $this->config->get('config_mail_smtp_password');
-		}
-
+		}	
+		
 		if (isset($this->request->post['config_mail_smtp_port'])) {
 			$data['config_mail_smtp_port'] = $this->request->post['config_mail_smtp_port'];
 		} elseif ($this->config->has('config_mail_smtp_port')) {
 			$data['config_mail_smtp_port'] = $this->config->get('config_mail_smtp_port');
 		} else {
 			$data['config_mail_smtp_port'] = 25;
-		}
-
+		}	
+		
 		if (isset($this->request->post['config_mail_smtp_timeout'])) {
 			$data['config_mail_smtp_timeout'] = $this->request->post['config_mail_smtp_timeout'];
 		} elseif ($this->config->has('config_mail_smtp_timeout')) {
-			$data['config_mail_smtp_timeout'] = $this->config->get('config_mail_smtp_timeout');
+			$data['config_mail_smtp_timeout'] = $this->config->get('config_mail_smtp_timeout');		
 		} else {
 			$data['config_mail_smtp_timeout'] = 5;
-		}
+		}	
 
 		if (isset($this->request->post['config_mail_alert'])) {
 			$data['config_mail_alert'] = $this->request->post['config_mail_alert'];
@@ -1326,6 +1349,7 @@ class ControllerSettingSetting extends Controller {
 	}
 
 	protected function validate() {
+		
 		if (!$this->user->hasPermission('modify', 'setting/setting')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
@@ -1334,7 +1358,7 @@ class ControllerSettingSetting extends Controller {
 			$this->error['name'] = $this->language->get('error_name');
 		}
 
-		if ((utf8_strlen($this->request->post['config_owner']) < 3) || (utf8_strlen($this->request->post['config_owner']) > 64)) {
+		if ((utf8_strlen($this->request->post['config_owner']) < 1) || (utf8_strlen($this->request->post['config_owner']) > 64)) {
 			$this->error['owner'] = $this->language->get('error_owner');
 		}
 
@@ -1353,15 +1377,15 @@ class ControllerSettingSetting extends Controller {
 		if (!$this->request->post['config_meta_title']) {
 			$this->error['meta_title'] = $this->language->get('error_meta_title');
 		}
-
+		
 		if (!empty($this->request->post['config_customer_group_display']) && !in_array($this->request->post['config_customer_group_id'], $this->request->post['config_customer_group_display'])) {
 			$this->error['customer_group_display'] = $this->language->get('error_customer_group_display');
 		}
-
+		
 		if ($this->request->post['config_login_attempts'] < 1) {
 			$this->error['login_attempts'] = $this->language->get('error_login_attempts');
 		}
-
+		
 		if (!$this->request->post['config_voucher_min']) {
 			$this->error['voucher_min'] = $this->language->get('error_voucher_min');
 		}
@@ -1463,7 +1487,7 @@ class ControllerSettingSetting extends Controller {
 		if ($this->error && !isset($this->error['warning'])) {
 			$this->error['warning'] = $this->language->get('error_warning');
 		}
-
+		
 		return !$this->error;
 	}
 
@@ -1480,4 +1504,5 @@ class ControllerSettingSetting extends Controller {
 			$this->response->setOutput($server . 'image/no_image.png');
 		}
 	}
+
 }

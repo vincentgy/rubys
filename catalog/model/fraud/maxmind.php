@@ -26,7 +26,7 @@ class ModelFraudMaxMind extends Model {
 			$request .= '&license_key=' . urlencode($this->config->get('maxmind_key'));
 
 			if ($order_info['shipping_method']) {
-				$request .= '&shipAddr=' . urlencode($order_info['shipping_address_1']);
+				$request .= '&shipAddr=' . urlencode($order_info['shipping_address']);
 				$request .= '&shipCity=' . urlencode($order_info['shipping_city']);
 				$request .= '&shipRegion=' . urlencode($order_info['shipping_zone']);
 				$request .= '&shipPostal=' . urlencode($order_info['shipping_postcode']);

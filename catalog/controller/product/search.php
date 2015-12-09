@@ -462,6 +462,7 @@ class ControllerProductSearch extends Controller {
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/search.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/search.tpl', $data));
+
 		} else {
 			$this->response->setOutput($this->load->view('default/template/product/search.tpl', $data));
 		}

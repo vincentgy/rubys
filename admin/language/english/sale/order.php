@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']              = 'Orders';
+$_['heading_title']            	 = 'Orders';
 
 // Text
 $_['text_list']                  = 'Order List';
@@ -58,6 +58,7 @@ $_['text_commission_removed']    = 'Success: Commission removed!';
 $_['text_restock']               = 'Success: Products have been restocked!';
 $_['text_upload']                = 'Your file was successfully uploaded!';
 $_['text_picklist']              = 'Dispatch Note';
+$_['text_shipping_telephone']    = 'Shipping Telephone';
 
 // Column
 $_['column_order_id']            = 'Order ID';
@@ -81,15 +82,13 @@ $_['column_weight']              = 'Product weight';
 $_['entry_store']                = 'Store';
 $_['entry_customer']             = 'Customer';
 $_['entry_customer_group']       = 'Customer Group';
-$_['entry_firstname']            = 'First Name';
-$_['entry_lastname']             = 'Last Name';
+$_['entry_fullname']             = 'Full Name';
 $_['entry_email']                = 'E-Mail';
 $_['entry_telephone']            = 'Telephone';
 $_['entry_fax']                  = 'Fax';
 $_['entry_address']              = 'Choose Address';
 $_['entry_company']              = 'Company';
-$_['entry_address_1']            = 'Address 1';
-$_['entry_address_2']            = 'Address 2';
+$_['entry_address']              = 'Address';
 $_['entry_city']                 = 'City';
 $_['entry_postcode']             = 'Postcode';
 $_['entry_country']              = 'Country';
@@ -120,12 +119,15 @@ $_['entry_order_id']             = 'Order ID';
 $_['entry_total']                = 'Total';
 $_['entry_date_added']           = 'Date Added';
 $_['entry_date_modified']        = 'Date Modified';
-
-// Help
-$_['help_override']              = 'If the customers order is being blocked from changing the order status due to a anti-fraud extension enable override.';
+$_['entry_shipping_telephone']   = 'Shipping Telephone';
 
 // Error
 $_['error_warning']              = 'Warning: Please check the form carefully for errors!';
 $_['error_permission']           = 'Warning: You do not have permission to modify orders!';
 $_['error_action']               = 'Warning: Could not complete this action!';
 $_['error_filetype']			 = 'Invalid file type!';
+
+// Help
+$_['help_override']              = 'If the customers order is being blocked from changing the order status due to a anti-fraud extension enable override.';
+
+

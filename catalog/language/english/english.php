@@ -56,6 +56,7 @@ $_['button_quote']          = 'Get Quotes';
 $_['button_list']           = 'List';
 $_['button_grid']           = 'Grid';
 $_['button_map']            = 'View Google Map';
+$_['button_baidu_map']      = 'View Baidu Map';
 
 // Error
 $_['error_exception']       = 'Error Code(%s): %s in %s on line %s';

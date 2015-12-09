@@ -745,15 +745,3 @@ h2.price {
     background-image: none;
     background-color: #df5c39;
 }
-
-.wechat_icon {
-    background-image: url("../image/wechat.png");
-    background-size: contain;
-    float: right;
-    height: 150px;
-    width: 150px;
-    position:relative;
-    top:10px;
-    margin-right:20px;
-    margin-left: 10px;
-}

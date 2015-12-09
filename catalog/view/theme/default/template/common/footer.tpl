@@ -39,15 +39,17 @@
       </div>
     </div>
     <hr>
-    <p><?php echo $powered; ?></p>
+    <p><?php echo $powered; ?></p> 
+    <?php if($miit) { ?>
+    <p><a target="_blank" href="http://www.miitbeian.gov.cn/"><?php echo $miit; ?></a></p>
+    <?php } ?>
   </div>
 </footer>
 
 <!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
+MyCnCart 是开源软件，没有任何加密。您可以将【技术支持 MyCnCart】移除， 但希望您能够做一小额捐款, 建议个人用户捐献10元人民币，企业用户捐献100元人民币或更多金额，如此mycncart的开发者才能够投入更多的时间精力为大家提供更好的版本服务。请使用支付宝捐款至支付宝账户：tonyspace2010@gmail.com  姓名： 杨兆锋
+//--> 
 
-<!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
+<!-- 本默认模版来自于 www.welfordmedia.co.uk -->
 
 </body></html>

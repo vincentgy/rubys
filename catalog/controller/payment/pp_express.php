@@ -140,8 +140,8 @@ class ControllerPaymentPPExpress extends Controller {
 		if ($this->session->data['paypal']['guest'] == true) {
 
 			$this->session->data['guest']['customer_group_id'] = $this->config->get('config_customer_group_id');
-			$this->session->data['guest']['firstname'] = trim($result['FIRSTNAME']);
-			$this->session->data['guest']['lastname'] = trim($result['LASTNAME']);
+			$this->session->data['guest']['fullname'] = trim($result['FULLNAME']);
+			$this->session->data['guest']['lastname'] = '';
 			$this->session->data['guest']['email'] = trim($result['EMAIL']);
 
 			if (isset($result['PHONENUM'])) {
@@ -152,8 +152,8 @@ class ControllerPaymentPPExpress extends Controller {
 
 			$this->session->data['guest']['fax'] = '';
 
-			$this->session->data['guest']['payment']['firstname'] = trim($result['FIRSTNAME']);
-			$this->session->data['guest']['payment']['lastname'] = trim($result['LASTNAME']);
+			$this->session->data['guest']['payment']['fullname'] = trim($result['FULLNAME']);
+			$this->session->data['guest']['payment']['lastname'] = '';
 
 			if (isset($result['BUSINESS'])) {
 				$this->session->data['guest']['payment']['company'] = $result['BUSINESS'];
@@ -180,7 +180,7 @@ class ControllerPaymentPPExpress extends Controller {
 				$this->session->data['guest']['payment']['postcode'] = $result['PAYMENTREQUEST_0_SHIPTOZIP'];
 				$this->session->data['guest']['payment']['city'] = $result['PAYMENTREQUEST_0_SHIPTOCITY'];
 
-				$this->session->data['guest']['shipping']['firstname'] = $shipping_first_name;
+				$this->session->data['guest']['shipping']['fullname'] = $shipping_first_name;
 				$this->session->data['guest']['shipping']['lastname'] = $shipping_last_name;
 				$this->session->data['guest']['shipping']['company'] = '';
 				$this->session->data['guest']['shipping']['address_1'] = $result['PAYMENTREQUEST_0_SHIPTOSTREET'];
@@ -319,7 +319,7 @@ class ControllerPaymentPPExpress extends Controller {
 					$zone_info = $this->db->query("SELECT * FROM `" . DB_PREFIX . "zone` WHERE `name` = '" . $this->db->escape($result['PAYMENTREQUEST_0_SHIPTOSTATE']) . "' AND `status` = '1' AND `country_id` = '" . (int)$country_info['country_id'] . "'")->row;
 
 					$address_data = array(
-						'firstname'  => $shipping_first_name,
+						'fullname'  => $shipping_first_name,
 						'lastname'   => $shipping_last_name,
 						'company'    => '',
 						'company_id' => '',
@@ -859,7 +859,7 @@ class ControllerPaymentPPExpress extends Controller {
 			if ($this->customer->isLogged() && isset($this->session->data['payment_address_id'])) {
 				$data['customer_id'] = $this->customer->getId();
 				$data['customer_group_id'] = $this->config->get('config_customer_group_id');
-				$data['firstname'] = $this->customer->getFirstName();
+				$data['fullname'] = $this->customer->getFullName();
 				$data['lastname'] = $this->customer->getLastName();
 				$data['email'] = $this->customer->getEmail();
 				$data['telephone'] = $this->customer->getTelephone();
@@ -871,7 +871,7 @@ class ControllerPaymentPPExpress extends Controller {
 			} elseif (isset($this->session->data['guest'])) {
 				$data['customer_id'] = 0;
 				$data['customer_group_id'] = $this->session->data['guest']['customer_group_id'];
-				$data['firstname'] = $this->session->data['guest']['firstname'];
+				$data['fullname'] = $this->session->data['guest']['fullname'];
 				$data['lastname'] = $this->session->data['guest']['lastname'];
 				$data['email'] = $this->session->data['guest']['email'];
 				$data['telephone'] = $this->session->data['guest']['telephone'];
@@ -880,7 +880,7 @@ class ControllerPaymentPPExpress extends Controller {
 				$payment_address = $this->session->data['guest']['payment'];
 			}
 
-			$data['payment_firstname'] = isset($payment_address['firstname']) ? $payment_address['firstname'] : '';
+			$data['payment_fullname'] = isset($payment_address['fullname']) ? $payment_address['fullname'] : '';
 			$data['payment_lastname'] = isset($payment_address['lastname']) ? $payment_address['lastname'] : '';
 			$data['payment_company'] = isset($payment_address['company']) ? $payment_address['company'] : '';
 			$data['payment_company_id'] = isset($payment_address['company_id']) ? $payment_address['company_id'] : '';
@@ -914,7 +914,7 @@ class ControllerPaymentPPExpress extends Controller {
 					$shipping_address = $this->session->data['guest']['shipping'];
 				}
 
-				$data['shipping_firstname'] = $shipping_address['firstname'];
+				$data['shipping_fullname'] = $shipping_address['fullname'];
 				$data['shipping_lastname'] = $shipping_address['lastname'];
 				$data['shipping_company'] = $shipping_address['company'];
 				$data['shipping_address_1'] = $shipping_address['address_1'];
@@ -937,7 +937,7 @@ class ControllerPaymentPPExpress extends Controller {
 					$data['shipping_code'] = $this->session->data['shipping_method']['code'];
 				}
 			} else {
-				$data['shipping_firstname'] = '';
+				$data['shipping_fullname'] = '';
 				$data['shipping_lastname'] = '';
 				$data['shipping_company'] = '';
 				$data['shipping_address_1'] = '';
@@ -1279,7 +1279,7 @@ class ControllerPaymentPPExpress extends Controller {
 		if ($this->cart->hasShipping()) {
 			$shipping = 0;
 			$data_shipping = array(
-				'PAYMENTREQUEST_0_SHIPTONAME'        => html_entity_decode($order_info['shipping_firstname'] . ' ' . $order_info['shipping_lastname'], ENT_QUOTES, 'UTF-8'),
+				'PAYMENTREQUEST_0_SHIPTONAME'        => html_entity_decode($order_info['shipping_fullname'] . ' ' . $order_info['shipping_lastname'], ENT_QUOTES, 'UTF-8'),
 				'PAYMENTREQUEST_0_SHIPTOSTREET'      => html_entity_decode($order_info['shipping_address_1'], ENT_QUOTES, 'UTF-8'),
 				'PAYMENTREQUEST_0_SHIPTOSTREET2'     => html_entity_decode($order_info['shipping_address_2'], ENT_QUOTES, 'UTF-8'),
 				'PAYMENTREQUEST_0_SHIPTOCITY'        => html_entity_decode($order_info['shipping_city'], ENT_QUOTES, 'UTF-8'),

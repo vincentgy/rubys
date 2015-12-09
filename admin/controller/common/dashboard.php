@@ -23,13 +23,14 @@ class ControllerCommonDashboard extends Controller {
 			'text' => $this->language->get('heading_title'),
 			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')
 		);
-
+		
 		// Check install directory exists
 		if (is_dir(dirname(DIR_APPLICATION) . '/install')) {
 			$data['error_install'] = $this->language->get('error_install');
 		} else {
 			$data['error_install'] = '';
 		}
+		
 
 		$data['token'] = $this->session->data['token'];
 
@@ -51,7 +52,9 @@ class ControllerCommonDashboard extends Controller {
 
 			$this->model_localisation_currency->refresh();
 		}
-
+			
 		$this->response->setOutput($this->load->view('common/dashboard.tpl', $data));
 	}
+	
+	
 }

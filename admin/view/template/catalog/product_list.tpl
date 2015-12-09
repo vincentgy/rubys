@@ -158,6 +158,21 @@
     </div>
   </div>
   <script type="text/javascript"><!--
+$('#button-jump').on('click', function() {
+	var url = 'index.php?route=catalog/product&token=<?php echo $token; ?>';
+
+	var pnum = $('input[name=\'pnum\']').val();
+
+	if (pnum) {
+		url += '&page=' + encodeURIComponent(pnum);
+	}
+
+	location = url;
+});
+//--></script> 
+
+
+  <script type="text/javascript"><!--
 $('#button-filter').on('click', function() {
 	var url = 'index.php?route=catalog/product&token=<?php echo $token; ?>';
 
@@ -193,7 +208,7 @@ $('#button-filter').on('click', function() {
 
 	location = url;
 });
-//--></script>
+//--></script> 
   <script type="text/javascript"><!--
 $('input[name=\'filter_name\']').autocomplete({
 	'source': function(request, response) {

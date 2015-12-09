@@ -1,6 +1,6 @@
 <?php
 // Version
-define('VERSION', '2.1.0.1');
+define('VERSION', '1.2.0.1');
 
 // Configuration
 if (is_file('config.php')) {
@@ -24,7 +24,7 @@ $config = new Config();
 $registry->set('config', $config);
 
 // Database
-$db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
+$db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 $registry->set('db', $db);
 
 // Settings

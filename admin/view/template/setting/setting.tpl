@@ -41,6 +41,7 @@
             <li><a href="#tab-server" data-toggle="tab"><?php echo $tab_server; ?></a></li>
           </ul>
           <div class="tab-content">
+            
             <div class="tab-pane active" id="tab-general">
                 <div class="form-group required">
                   <label class="col-sm-2 control-label" for="input-meta-title"><?php echo $entry_meta_title; ?></label>
@@ -120,12 +121,45 @@
                     <?php } ?>
                   </div>
                 </div>
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-miit"><?php echo $entry_miit; ?></label>
+                  <div class="col-sm-10">
+                    <input type="text" name="config_miit" value="<?php echo $config_miit; ?>" placeholder="<?php echo $entry_miit; ?>" id="input-miit" class="form-control" />
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label"><?php echo $entry_map_select; ?></label>
+                  <div class="col-sm-10">
+                    <label class="radio-inline">
+                      <?php if ($config_map_select == "baidu") { ?>
+                      <input type="radio" name="config_map_select" value="baidu" checked="checked" />
+                      <?php echo $text_baidu; ?>
+                      <?php } else { ?>
+                      <input type="radio" name="config_map_select" value="baidu" />
+                      <?php echo $text_baidu; ?>
+                      <?php } ?>
+                    </label>
+                    <label class="radio-inline">
+                      <?php if ($config_map_select == "google") { ?>
+                      <input type="radio" name="config_map_select" value="google" checked="checked" />
+                      <?php echo $text_google; ?>
+                      <?php } else { ?>
+                      <input type="radio" name="config_map_select" value="google" />
+                      <?php echo $text_google; ?>
+                      <?php } ?>
+                    </label>
+                  </div>
+                </div>
+              
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-geocode"><span data-toggle="tooltip" data-container="#tab-general" title="<?php echo $help_geocode; ?>"><?php echo $entry_geocode; ?></span></label>
                   <div class="col-sm-10">
                     <input type="text" name="config_geocode" value="<?php echo $config_geocode; ?>" placeholder="<?php echo $entry_geocode; ?>" id="input-geocode" class="form-control" />
                   </div>
                 </div>
+              
                 <div class="form-group required">
                   <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
                   <div class="col-sm-10">
@@ -190,6 +224,7 @@
                 <?php } ?>
 
             </div>
+            
             <div class="tab-pane" id="tab-local">
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-country"><?php echo $entry_country; ?></label>
@@ -604,9 +639,9 @@
                     <input type="text" name="config_login_attempts" value="<?php echo $config_login_attempts; ?>" placeholder="<?php echo $entry_login_attempts; ?>" id="input-login-attempts" class="form-control" />
                     <?php if ($error_login_attempts) { ?>
                     <div class="text-danger"><?php echo $error_login_attempts; ?></div>
-                    <?php } ?>
+                    <?php } ?>                  
                   </div>
-                </div>
+                </div>                
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-account"><span data-toggle="tooltip" title="<?php echo $help_account; ?>"><?php echo $entry_account; ?></span></label>
                   <div class="col-sm-10">
@@ -654,6 +689,7 @@
                     <input type="text" name="config_invoice_prefix" value="<?php echo $config_invoice_prefix; ?>" placeholder="<?php echo $entry_invoice_prefix; ?>" id="input-invoice-prefix" class="form-control" />
                   </div>
                 </div>
+                
                 <div class="form-group">
                   <label class="col-sm-2 control-label"><span data-toggle="tooltip" title="<?php echo $help_cart_weight; ?>"><?php echo $entry_cart_weight; ?></span></label>
                   <div class="col-sm-10">
@@ -1526,12 +1562,13 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-file-mime-allowed"><span data-toggle="tooltip" title="<?php echo $help_file_mime_allowed; ?>"><?php echo $entry_file_mime_allowed; ?></span></label>
                 <div class="col-sm-10">
-                  <textarea name="config_file_mime_allowed" rows="5" placeholder="<?php echo $entry_file_mime_allowed; ?>" id="input-file-mime-allowed" class="form-control"><?php echo $config_file_mime_allowed; ?></textarea>
+                  <textarea name="config_file_mime_allowed"  rows="5" placeholder="<?php echo $entry_file_mime_allowed; ?>" id="input-file-mime-allowed" class="form-control"><?php echo $config_file_mime_allowed; ?></textarea>
                 </div>
               </div>
-            </fieldset>
+              </fieldset>
             <fieldset>
               <legend><?php echo $text_error; ?></legend>
+              
               <div class="form-group">
                 <label class="col-sm-2 control-label"><?php echo $entry_error_display; ?></label>
                 <div class="col-sm-10">
@@ -1587,7 +1624,8 @@
                   <?php } ?>
                 </div>
               </div>
-              </fieldset>
+              
+              </fieldset>  
             </div>
           </div>
         </form>
@@ -1606,6 +1644,8 @@ $('select[name=\'config_template\']').on('change', function() {
 			$('.fa-spin').remove();
 		},
 		success: function(html) {
+     
+
 			$('#template').attr('src', html);
 		},
 		error: function(xhr, ajaxOptions, thrownError) {
@@ -1615,7 +1655,7 @@ $('select[name=\'config_template\']').on('change', function() {
 });
 
 $('select[name=\'config_template\']').trigger('change');
-//--></script>
+//--></script> 
   <script type="text/javascript"><!--
 $('select[name=\'config_country_id\']').on('change', function() {
 	$.ajax({
@@ -1628,6 +1668,8 @@ $('select[name=\'config_country_id\']').on('change', function() {
 			$('.fa-spin').remove();
 		},
 		success: function(json) {
+      
+
 			html = '<option value=""><?php echo $text_select; ?></option>';
 
 			if (json['zone'] && json['zone'] != '') {

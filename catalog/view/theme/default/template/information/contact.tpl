@@ -27,7 +27,11 @@
               <?php echo $address; ?>
               </address>
               <?php if ($geocode) { ?>
-              <a href="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=<?php echo $geocode_hl; ?>&t=m&z=15" target="_blank" class="btn btn-info"><i class="fa fa-map-marker"></i> <?php echo $button_map; ?></a>
+              	<?php if($map_select == 'google') { ?>
+              		<a href="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=<?php echo $geocode_hl; ?>&t=m&z=15" target="_blank" class="btn btn-info"><i class="fa fa-map-marker"></i> <?php echo $button_map; ?></a>
+              	<?php }else{ ?>
+              	 	<a href="<?php echo $baidu_map ?>" target="_blank" class="btn btn-info"><i class="fa fa-map-marker"></i> <?php echo $button_baidu_map; ?></a>
+              	<?php } ?>
               <?php } ?>
             </div>
             <div class="col-sm-3"><strong><?php echo $text_telephone; ?></strong><br>
@@ -130,6 +134,7 @@
               <?php } ?>
             </div>
           </div>
+          
           <?php echo $captcha; ?>
         </fieldset>
         <div class="buttons">

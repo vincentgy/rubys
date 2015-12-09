@@ -51,10 +51,14 @@
             <tr>
               <td style="width: 1%;"><button data-toggle="tooltip" title="<?php echo $text_customer; ?>" class="btn btn-info btn-xs"><i class="fa fa-user fa-fw"></i></button></td>
               <td><?php if ($customer) { ?>
-                <a href="<?php echo $customer; ?>" target="_blank"><?php echo $firstname; ?> <?php echo $lastname; ?></a>
+                <a href="<?php echo $customer; ?>" target="_blank"><?php echo $fullname; ?></a>
                 <?php } else { ?>
-                <?php echo $firstname; ?> <?php echo $lastname; ?>
+                <?php echo $fullname; ?>
                 <?php } ?></td>
+            </tr>
+            <tr>
+              <td><button data-toggle="tooltip" title="<?php echo $text_shipping_telephone; ?>" class="btn btn-info btn-xs"><i class="fa fa-mobile fa-fw"></i></button></td>
+              <td><?php echo $shipping_telephone; ?></td>
             </tr>
             <tr>
               <td><button data-toggle="tooltip" title="<?php echo $text_customer_group; ?>" class="btn btn-info btn-xs"><i class="fa fa-group fa-fw"></i></button></td>
@@ -103,7 +107,7 @@
               <tr>
                 <td><?php echo $text_affiliate; ?>
                   <?php if ($affiliate) { ?>
-                  (<a href="<?php echo $affiliate; ?>"><?php echo $affiliate_firstname; ?> <?php echo $affiliate_lastname; ?></a>)
+                  (<a href="<?php echo $affiliate; ?>"><?php echo $affiliate_fullname; ?></a>)
                   <?php } ?></td>
                 <td class="text-right"><?php echo $commission; ?></td>
                 <td class="text-center"><?php if ($affiliate) { ?>
