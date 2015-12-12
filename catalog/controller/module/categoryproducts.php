@@ -23,7 +23,7 @@ class ControllerModuleCategoryproducts extends Controller {
 		if (!empty($setting['product'])) {
 			$products = array_slice($setting['product'], 0, (int)$setting['limit']);
 			$product_id=$products[0];
-                        $data['heading_title_link'] = HTTP_CATALOG . 'index.php?route==product/category&amp;path='.$product_id;
+                        $data['heading_title_link'] = HTTP_SERVER . 'index.php?route==product/category&amp;path='.$product_id;
 
 			$filter_data = array(
 				'sort'  => 'p.date_added',
