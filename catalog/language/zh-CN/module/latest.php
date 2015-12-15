@@ -4,4 +4,4 @@
 $_['heading_title'] = '最新商品';
 
 // Text
-$_['text_tax']      = '附加税:';
+$_['text_tax']      = '税前:';
