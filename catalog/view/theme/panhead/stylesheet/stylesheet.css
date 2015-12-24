@@ -941,6 +941,15 @@ h2.price {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   /* general */
+  .full-boxed {
+    width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white; }
+
+  .columns {
+    width: 970px; }
+
   #header {
     background: none; }
 
@@ -1169,6 +1178,14 @@ h2.price {
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   /* general */
+ .full-boxed {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .columns {
+    width: 1170px; }
+
   /* top */
   .user_info:before {
     content: "\f007"; }
