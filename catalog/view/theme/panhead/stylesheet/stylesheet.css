@@ -220,7 +220,7 @@ div.required .control-label:before {
   color: #888888; }
   #footer .content-footer h5 {
     color: #052b40;
-    font-family: "Roboto", sans-serif;
+    font-family: 微软雅黑, 宋体, 'Segoe UI', Arial, Helvetica, sans-serif;
     font-size: 1.3em;
     padding: 0 0 10px;
     display: block;
@@ -775,6 +775,14 @@ h2.price {
 @media (min-width: 768px) {
   .columns {
     min-height: 600px; }
+  body {
+    background: url("../image/bg_body.jpg") repeat left top; }
+
+  .columns {
+    min-height: 600px; }
+  
+  .columns {
+    background: white; }
 
   /* footer */
   #footer .content-footer {
