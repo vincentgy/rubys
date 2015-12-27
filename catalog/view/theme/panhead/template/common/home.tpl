@@ -4,7 +4,7 @@
         <div class="col-xs-12"><?php echo $content_top; ?></div>
     </div>
     <div class="side-bar">
-        <a href="" class="icon-chat">微信<div class="chat-tips"><i>微信扫一扫，客服等你找</i><img style="width:138px;height:138px;" src="../../../wechat.png" alt="微信扫一扫，客服等你找"></div></a>
+        <a href="" class="icon-chat">微信<div class="chat-tips"><i>微信扫一扫，客服等你找</i><img style="width:138px;height:138px;" src="../../../image/wechat.png" alt="微信扫一扫，客服等你找"></div></a>
         <a href="mailto:admin@admin.com" class="icon-mail">mail</a>
     </div>
     <div class="row"><?php echo $column_left; ?>
