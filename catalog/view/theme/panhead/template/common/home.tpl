@@ -3,6 +3,10 @@
     <div class="row">
         <div class="col-xs-12"><?php echo $content_top; ?></div>
     </div>
+    <div class="side-bar">
+        <a href="" class="icon-chat">微信<div class="chat-tips"><i></i><img style="width:138px;height:138px;" src="../../image/wechat.jpg" alt="微信扫一扫，客服等你找"></div></a>
+        <a href="mailto:admin@admin.com" class="icon-mail">mail</a>
+    </div>
     <div class="row"><?php echo $column_left; ?>
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-4 col-md-6'; ?>
