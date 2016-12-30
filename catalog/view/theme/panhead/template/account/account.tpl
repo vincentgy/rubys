@@ -40,7 +40,6 @@
                             <?php } ?>
                             <li><a href="<?php echo $return; ?>" class="btn btn-link" title="<?php echo $text_return; ?>"><i class="fa fa-reply"></i><?php echo $text_return; ?></a></li>
                             <li><a href="<?php echo $transaction; ?>" class="btn btn-link" title="<?php echo $text_transaction; ?>"><i class="fa fa-shopping-cart"></i><?php echo $text_transaction; ?></a></li>
-                            <li><a href="<?php echo $recurring; ?>" class="btn btn-link" title="<?php echo $text_recurring; ?>"><i class="fa fa-credit-card"></i><?php echo $text_recurring; ?></a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 body {
-  font-family: 微软雅黑, 宋体, 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-family: 12px/1.5 'Arial', 'Microsoft YaHei', 'sans-serif';
   font-weight: 400;
   color: #666666;
   -webkit-font-smoothing: antialiased; }
@@ -26,6 +26,15 @@ h2 {
 h3 {
   font-size: 16px; }
 
+.page-heading {
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
+    background-color: transparent;
+    border-bottom: 2px solid #FF9800;
+    font-size: 18px;
+    line-height: 28px;
+}
+
 h4 {
   font-size: 13px;
   height: 32px;
@@ -51,7 +60,7 @@ a {
   transition: all 0.6s ease 0s; }
   a:hover {
     text-decoration: none;
-    color: #888888; }
+    color: #FF9800; }
   a:focus {
     outline: none medium;
     outline-offset: 0; }

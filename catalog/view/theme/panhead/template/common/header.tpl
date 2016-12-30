@@ -97,6 +97,7 @@
                                                     <li><a href="<?php echo $order; ?>" class="btn-block"><?php echo $text_order; ?></a></li>
                                                     <li><a href="<?php echo $transaction; ?>" class="btn-block"><?php echo $text_transaction; ?></a></li>
                                                     <li><a href="<?php echo $download; ?>" class="btn-block"><?php echo $text_download; ?></a></li>
+                                                    <li><a href="<?php echo $logout; ?>" class="btn-block"><?php echo $text_logout; ?></a></li>
                                                 </ul>
                                             </li>
 

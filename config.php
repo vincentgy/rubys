@@ -1,9 +1,10 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://52.27.31.162/');
+//define('HTTP_SERVER', 'http://52.27.31.162/');
+define('HTTP_SERVER', 'http://starmall.co.nz/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://52.27.31.162/');
+define('HTTPS_SERVER', 'http://starmall.co.nz/');
 
 // DIR
 define('DIR_APPLICATION', '/var/www/html/catalog/');

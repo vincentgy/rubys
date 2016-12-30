@@ -17,7 +17,7 @@
 <meta name="keywords" content= "<?php echo $keywords; ?>" />
 <?php } ?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<?php if ($icon) { ?>
+<?php if (isset($icon)) { ?>
 <link href="<?php echo $icon; ?>" rel="icon" />
 <?php } ?>
 <?php foreach ($links as $link) { ?>
@@ -37,7 +37,6 @@
 <?php foreach ($scripts as $script) { ?>
 <script src="<?php echo $script; ?>" type="text/javascript"></script>
 <?php } ?>
-<?php echo $google_analytics; ?>
 </head>
 <body class="<?php echo $class; ?>">
 

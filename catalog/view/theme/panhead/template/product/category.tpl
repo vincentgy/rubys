@@ -16,7 +16,7 @@
         <div class="<?php echo $class; ?>">
             <section id="content">
                 <?php echo $content_top; ?>
-                <h1><?php echo $heading_title; ?></h1>
+                <h1 class="page-heading"><?php echo $heading_title; ?></h1>
                 <?php if ($thumb || $description) { ?>
                 <div class="row">
                     <?php if ($thumb) { ?>
