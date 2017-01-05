@@ -80,7 +80,7 @@
                             <?php $class = 'col-sm-12 col-md-7'; ?>
                             <?php } ?>
                             <div id="product-desc" class="<?php echo $class; ?>">
-                                <h1 itemprop="name"><?php echo $heading_title; ?></h1>
+                                <h3 itemprop="name"><?php echo $heading_title; ?></h3>
 
                                 <?php if ($review_status) { ?>
                                 <div class="rating">

@@ -1,6 +1,6 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: 12px/1.5 'Arial', 'Microsoft YaHei', 'sans-serif';
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
@@ -883,12 +883,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857;
-  color: #333333;
-  background-color: white; }
-
+    font-family: 12px/1.5 'Arial', 'Microsoft YaHei', 'sans-serif';
+    font-weight: 400;
+    color: #666666;
+    -webkit-font-smoothing: antialiased;}
 input,
 button,
 select,

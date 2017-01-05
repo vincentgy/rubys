@@ -3,9 +3,8 @@
     <div class="row">
         <div class="col-xs-12"><?php echo $content_top; ?></div>
     </div>
-    <div class="side-bar">
-        <a href="" class="icon-chat">微信<div class="chat-tips"><i>微信扫一扫，客服等你找</i><img style="width:138px;height:138px;" src="catalog/view/theme/panhead/image/wechat.png" alt="微信扫一扫，客服等你找"></div></a>
-        <a href="mailto:admin@admin.com" class="icon-mail">mail</a>
+    <div class="side-bar" alt="微信扫一扫，客服等你找">
+        <a href="" class="icon-chat" alt="微信扫一扫，客服等你找">微信<div class="chat-tips"><i>微信扫一扫，客服等你找</i><img style="width:96px;height:96px;" src="catalog/view/theme/panhead/image/wechat.png" tooltip="微信扫一扫，客服等你找"></div></a>
     </div>
     <div class="row"><?php echo $column_left; ?>
         <?php if ($column_left && $column_right) { ?>
